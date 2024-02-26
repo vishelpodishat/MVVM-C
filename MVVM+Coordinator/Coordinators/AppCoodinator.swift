@@ -17,6 +17,26 @@ final class AppCoodinator: Coordinator {
     }
 
     func start() {
-        <#code#>
+        let vc = ViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+
+    func openFirstVC() {
+        let vc = ViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+
+    func openSecondVC() {
+        let vc = SecondVC()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+
+    func openThirdVC() {
+        let vc = ThirdVC()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }
